@@ -91,6 +91,10 @@ public class LoginActivity extends KBaseActivity {
             public void onFailure(String errorEvent, String message) {
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
                 loginBtn.setEnabled(true);
+
+                Intent intent = new Intent(context, CouponListActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
